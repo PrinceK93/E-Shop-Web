@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Shop - Product Detail</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        .product-detail-container {
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 16px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 0.6s ease;
+        }
+
+        .product-image {
+            flex: 1;
+            min-width: 320px;
+            animation: zoomIn 1s ease;
+        }
+
+        .product-image img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.4s ease;
+        }
+
+        .product-image img:hover {
+            transform: scale(1.05);
+        }
+
+        .product-info {
+            flex: 2;
+            min-width: 320px;
+            color: #333;
+        }
+
+        .product-info h1 {
+            font-size: 2.5em;
+            margin-bottom: 12px;
+            color: #333;
+        }
+
+        .product-info p.description {
+            font-size: 1.1em;
+            line-height: 1.7;
+            margin-bottom: 24px;
+            color: #666;
+        }
+
+        .product-info .price {
+            font-size: 1.8em;
+            color: #ff6f61;
+            margin-bottom: 24px;
+            font-weight: bold;
+        }
+
+        .product-info button {
+            background: linear-gradient(135deg, #2403fb, #042dfa);
+            color: white;
+            border: none;
+            padding: 14px 24px;
+            font-size: 1em;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        .product-info button:hover {
+            background: linear-gradient(135deg, #062295, #050f9c);
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .product-detail-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .product-image,
+            .product-info {
+                width: 100%;
+            }
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes zoomIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="container" style="display: flex; align-items: center; justify-content: space-between;">
+            <h1 class="logo">E-Shop</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="product.html">Products</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </nav>
+            <a href="cart.html" class="cart-icon" style="font-size: 24px; color: white; text-decoration: none;">
+                <i class="fas fa-shopping-cart"></i>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <div class="product-detail-container">
+            <div class="product-image">
+                <img id="productImage" src="images/sample.jpg" alt="Product Image" />
+            </div>
+            <div class="product-info">
+                <h1 id="productName">Product Name</h1>
+                <p class="description" id="productDescription">
+                    This is a detailed description of the product. It includes features, specifications, and other relevant
+                    information that helps the customer understand the value of the product.
+                </p>
+                <div class="price" id="productPrice">₹999</div>
+                <button onclick="addToCart()">Add to Cart</button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About E-Shop</h3>
+                <p>Your trusted online store for the latest tech and lifestyle products. We offer quality products with fast delivery and secure transactions.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="product.html">Products</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Account</h3>
+                <ul>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="login.html">Register</a></li>
+                    <li><a href="checkout.html">Checkout</a></li>
+                    <li><a href="cart.html">My Cart</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                <p><i class="fas fa-envelope"></i> info@eshop.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Shopping St, City, State 12345</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 E-Shop. All rights reserved. | Privacy Policy | Terms of Service</p>
+        </div>
+    </footer>
+
+    <script>
+        const product = JSON.parse(localStorage.getItem("selectedProduct"));
+
+        if (product) {
+            document.getElementById("productName").textContent = product.name;
+            document.getElementById("productPrice").textContent = "₹" + product.price;
+            document.getElementById("productImage").src = product.image;
+            document.getElementById("productDescription").textContent = product.description || "No description available.";
+        }
+
+        function addToCart() {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            const existing = cart.find(item => item.name === product.name);
+            if (existing) {
+                existing.quantity += 1;
+            } else {
+                cart.push({ name: product.name, price: product.price, quantity: 1 });
+            }
+            localStorage.setItem("cart", JSON.stringify(cart));
+            alert("Product added to cart!");
+        }
+    </script>
+
+</body>
+
+</html>

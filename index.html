@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>E-Shop - Home</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+  <div class="swing-logo-wrapper">
+    <div class="rope"></div>
+    <img src="images/E-Shop.png" alt="Logo" class="swing-logo" />
+  </div>
+
+  <header class="navbar">
+    <div class="container" style="display: flex; align-items: center; justify-content: space-between;">
+      <h1 class="logo">E-Shop</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="product.html">Products</a></li>
+          <li><a href="cart.html">Cart</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </nav>
+      <a href="cart.html" class="cart-icon" style="font-size: 24px; color: white; text-decoration: none;">
+        <i class="fas fa-shopping-cart"></i>
+      </a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <video autoplay muted loop playsinline class="bg-video">
+      <source src="videos/hero-video.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+
+    <div class="hero-content">
+      <h2>Discover the Future of Shopping</h2>
+      <p>Shop the latest tech and lifestyle products from E-Shop</p>
+      <a href="product.html" class="btn-primary">Explore Now</a>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="feature-card glow">
+      <h3>🚚 Fast Delivery</h3>
+      <p>Speedy delivery right to your doorstep.</p>
+    </div>
+    <div class="feature-card glow">
+      <h3>💳 Secure Payment</h3>
+      <p>Safe and encrypted transactions.</p>
+    </div>
+    <div class="feature-card glow">
+      <h3>🏆 Top Brands</h3>
+      <p>Shop from the best brands in the world.</p>
+    </div>
+  </section>
+
+  <section class="product-slider" data-category="smartwatches">
+    <h2>Featured Smartwatches</h2>
+    <div class="slider-container">
+      <div class="slider-track">
+        <div class="card">
+          <a href="/products/smartwatch1">
+            <img src="./images/watch1.jpeg" alt="Apple Watch Series 8" />
+            <h3>Apple Watch Series 8</h3>
+            <p>$399.99</p>
+            <button class="add-to-cart"><a href="product.html">View More</a></button>
+          </a>
+        </div>
+        <div class="card">
+          <a href="/products/smartwatch2">
+            <img src="./images/watch 2.jpeg" alt="Samsung Galaxy Watch 5" />
+            <h3>Samsung Galaxy Watch 5</h3>
+            <p>$279.99</p>
+            <button class="add-to-cart"><a href="product.html">View More</a></button>
+          </a>
+        </div>
+        <div class="card">
+          <a href="/products/smartwatch3">
+            <img src="./images/watch 3.jpeg" alt="Fitbit Versa 4" />
+            <h3>Fitbit Versa 4</h3>
+            <p>$229.99</p>
+            <button class="add-to-cart"><a href="product.html">View More</a></button>
+          </a>
+        </div>
+        <div class="card">
+          <a href="/products/smartwatch4">
+            <img src="./images/watch 4.jpeg" alt="Garmin Venu 2" />
+            <h3>Garmin Venu 2</h3>
+            <p>$349.99</p>
+            <button class="add-to-cart"><a href="product.html">View More</a></button>
+          </a>
+        </div>
+        <div class="card">
+          <a href="/products/smartwatch5">
+            <img src="./images/watch 5.jpeg" alt="Garmin Venu 2" />
+            <h3>Garmin Venu 2</h3>
+            <p>$349.99</p>
+            <button class="add-to-cart"><a href="product.html">View More</a></button>
+          </a>
+        </div>
+        <div class="card">
+          <a href="/products/smartwatch6">
+            <img src="./images/watch 6.jpeg" alt="Garmin Venu 2" />
+            <h3>Garmin Venu 2</h3>
+            <p>$349.99</p>
+            <button class="add-to-cart"><a href="product.html">View More</a></button>
+          </a>
+        </div>
+      </div>
+      <button class="prev">&lt;</button>
+      <button class="next">&gt;</button>
+    </div>
+  </section>
+
+  <section class="product-slider" data-category="wireless-headphones">
+    <h2>Featured Wireless Headphones</h2>
+    <div class="slider-container">
+      <div class="slider-track">
+        <div class="card">
+          <a href="/products/headphones1">
+            <img src="./images/headphone1.jpeg" alt="Sony WH-1000XM5" />
+            <h3>Sony WH-1000XM5</h3>
+            <p>$349.99</p>
+            <button class="add-to-cart"><a href="product.html">View More</a></button>
+          </a>
+        </div>
+        <div class="card">
+          <a href="/products/headphones2">
+            <img src="./images/headphone2.jpeg" alt="Bose QuietComfort 45" />
+            <h3>Bose QuietComfort 45</h3>
+            <p>$299.99</p>
+            <button class="add-to-cart"><a href="product.html">View More</a></button>
+          </a>
+        </div>
+        <div class="card">
+          <a href="/products/headphones3">
+            <img src="./images/headphone3.jpeg" alt="Apple AirPods Max" />
+            <h3>Apple AirPods Max</h3>
+            <p>$549.99</p>
+            <button class="add-to-cart"><a href="product.html">View More</a></button>
+          </a>
+        </div>
+        <div class="card">
+          <a href="/products/headphones4">
+            <img src="./images/headphone4.jpeg" alt="Jabra Elite 85h" />
+            <h3>Jabra Elite 85h</h3>
+            <p>$249.99</p>
+            <button class="add-to-cart"><a href="product.html">View More</a></button>
+          </a>
+        </div>
+        <div class="card">
+          <a href="/products/headphones5">
+            <img src="./images/headphone4.jpeg" alt="Jabra Elite 85h" />
+            <h3>Jabra Elite 85h</h3>
+            <p>$249.99</p>
+            <button class="add-to-cart"><a href="product.html">View More</a></button>
+          </a>
+        </div>
+      </div>
+      <button class="prev">&lt;</button>
+      <button class="next">&gt;</button>
+    </div>
+  </section>
+
+  <section class="product-slider" data-category="smart-tvs">
+    <h2>Featured Smart TVs</h2>
+    <div class="slider-container">
+      <div class="slider-track">
+        <div class="card">
+          <a href="/products/tv1">
+            <img src="./images/TV1.jpeg" alt="LG OLED C2" />
+            <h3>LG OLED C2</h3>
+            <p>$1,299.99</p>
+            <button class="add-to-cart"><a href="product.html">View More</a></button>
+          </a>
+        </div>
+        <div class="card">
+          <a href="/products/tv2">
+            <img src="./images/TV2.jpeg" alt="Samsung QLED QN90B" />
+            <h3>Samsung QLED QN90B</h3>
+            <p>$1,499.99</p>
+            <button class="add-to-cart"><a href="product.html">View More</a></button>
+          </a>
+        </div>
+        <div class="card">
+          <a href="/products/tv3">
+            <img src="./images/TV3.jpeg" alt="Sony Bravia X90K" />
+            <h3>Sony Bravia X90K</h3>
+            <p>$1,199.99</p>
+            <button class="add-to-cart"><a href="product.html">View More</a></button>
+          </a>
+        </div>
+        <div class="card">
+          <a href="/products/tv4">
+            <img src="./images/TV4.jpeg" alt="TCL 6-Series" />
+            <h3>TCL 6-Series</h3>
+            <p>$799.99</p>
+            <button class="add-to-cart"><a href="product.html">View More</a></button>
+          </a>
+        </div>
+        <div class="card">
+          <a href="/products/tv5">
+            <img src="./images/TV5.jpeg" alt="TCL 5-Series" />
+            <h3>TCL 6-Series</h3>
+            <p>$799.99</p>
+            <button class="add-to-cart"><a href="product.html">View More</a></button>
+          </a>
+        </div>
+      </div>
+      <button class="prev">&lt;</button>
+      <button class="next">&gt;</button>
+    </div>
+  </section>
+
+  <section class="product-slider" data-category="laptops">
+    <h2>Featured Laptops</h2>
+    <div class="slider-container">
+      <div class="slider-track">
+        <div class="card">
+          <a href="/products/laptop1">
+            <img src="./images/laptop1.jpeg" alt="MacBook Pro M2" />
+            <h3>MacBook Pro M2</h3>
+            <p>$1,299.99</p>
+            <button class="add-to-cart"><a href="product.html">View More</a></button>
+          </a>
+        </div>
+        <div class="card">
+          <a href="/products/laptop2">
+            <img src="./images/laptop 2.jpeg" alt="Dell XPS 13" />
+            <h3>Dell XPS 13</h3>
+            <p>$999.99</p>
+            <button class="add-to-cart"><a href="product.html">View More</a></button>
+          </a>
+        </div>
+        <div class="card">
+          <a href="/products/laptop3">
+            <img src="./images/laptop3.jpeg" alt="HP Spectre x360" />
+            <h3>HP Spectre x360</h3>
+            <p>$1,199.99</p>
+            <button class="add-to-cart"><a href="product.html">View More</a></button>
+          </a>
+        </div>
+        <div class="card">
+          <a href="/products/laptop4">
+            <img src="./images/laptop4.jpeg" alt="Lenovo ThinkPad X1" />
+            <h3>Lenovo ThinkPad X1</h3>
+            <p>$1,499.99</p>
+            <button class="add-to-cart"><a href="product.html">View More</a></button>
+          </a>
+        </div>
+        <div class="card">
+          <a href="/products/laptop5">
+            <img src="./images/laptop4.jpeg" alt="Lenovo ThinkPad X2" />
+            <h3>Lenovo ThinkPad X1</h3>
+            <p>$1,499.99</p>
+            <button class="add-to-cart"><a href="product.html">View More</a></button>
+          </a>
+        </div>
+      </div>
+      <button class="prev">&lt;</button>
+      <button class="next">&gt;</button>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>About E-Shop</h3>
+        <p>Your trusted online store for the latest tech and lifestyle products. We offer quality products with fast
+          delivery and secure transactions.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="product.html">Products</a></li>
+          <li><a href="cart.html">Cart</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Account</h3>
+        <ul>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="login.html">Register</a></li>
+          <li><a href="checkout.html">Checkout</a></li>
+          <li><a href="cart.html">My Cart</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contact Info</h3>
+        <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+        <p><i class="fas fa-envelope"></i> info@eshop.com</p>
+        <p><i class="fas fa-map-marker-alt"></i> 123 Shopping St, City, State 12345</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 E-Shop. All rights reserved. | Privacy Policy | Terms of Service</p>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+
+</html>

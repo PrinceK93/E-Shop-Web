@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>E-Shop - Products</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+ <style>
+  .product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 1.5rem;
+  }
+
+  .product-card {
+    flex: 0 0 auto;
+    width: 250px;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    min-height: 430px;
+  }
+
+  .product-card img {
+    max-width: 100%;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+  }
+
+  .product-card h3 {
+    margin: 0.5rem 0 0.2rem;
+  }
+
+  .product-card p {
+    margin: 0.2rem 0 1rem;
+  }
+
+  .product-card button {
+    margin-top: 0.5rem;
+    padding: 8px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    transition: background-color 0.3s ease;
+  }
+
+  .product-card button:hover {
+    background-color: #0056b3;
+  }
+
+  .added-success {
+    background-color: #4CAF50 !important;
+    color: white !important;
+  }
+
+  .tick::after {
+    content: "✔";
+    margin-left: 8px;
+  }
+
+  .t {
+    text-align: center;
+    margin: 2rem 0 1rem;
+  }
+</style>
+
+</head>
+
+<body>
+
+  <header class="navbar">
+    <div class="container" style="display: flex; align-items: center; justify-content: space-between;">
+      <h1 class="logo">E-Shop</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="product.html">Products</a></li>
+          <li><a href="cart.html">Cart</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </nav>
+      <a href="cart.html" class="cart-icon" style="font-size: 24px; color: white; text-decoration: none;">
+        <i class="fas fa-shopping-cart"></i>
+      </a>
+    </div>
+  </header>
+
+  <main style="padding: 2rem;">
+    <div style="text-align: center; margin-bottom: 2rem;">
+      <input 
+        type="text" 
+        id="searchInput" 
+        placeholder="Search products..." 
+        style="padding: 10px; width: 60%; font-size: 1rem; border: 2px solid #ff6600; border-radius: 8px;"
+      >
+    </div>
+
+    <section>
+      <h2 class="t">Smart Watches</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="images/watch1.jpeg" alt="Smart Watch 1" width="200">
+          <h3>Smart Watch X1</h3>
+          <p>₹3999</p>
+          <div class="card-buttons">
+            <button onclick="addToCart(this, 'Smart Watch X1', 3999)">Add to Cart</button>
+            <button class="view-more-btn">View More</button>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="images/watch 2.jpeg" alt="Smart Watch 2" width="200">
+          <h3>Smart Fit Pro 1</h3>
+          <p>₹4499</p>
+          <div class="card-buttons">
+            <button onclick="addToCart(this, 'Smart Fit Pro 1', 4499)">Add to Cart</button>
+            <button class="view-more-btn">View More</button>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="images/watch 3.jpeg" alt="Smart Watch 3" width="200">
+          <h3>Smart Fit Pro 2</h3>
+          <p>₹4499</p>
+          <div class="card-buttons">
+            <button onclick="addToCart(this, 'Smart Fit Pro 2', 4499)">Add to Cart</button>
+            <button class="view-more-btn">View More</button>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="images/watch 4.jpeg" alt="Smart Watch 4" width="200">
+          <h3>Smart Fit Pro 3</h3>
+          <p>₹4499</p>
+          <div class="card-buttons">
+            <button onclick="addToCart(this, 'Smart Fit Pro 3', 4499)">Add to Cart</button>
+            <button class="view-more-btn">View More</button>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="images/watch 5.jpeg" alt="Smart Watch 5" width="200">
+          <h3>Smart Fit Pro 4</h3>
+          <p>₹4499</p>
+          <div class="card-buttons">
+            <button onclick="addToCart(this, 'Smart Fit Pro 4', 4499)">Add to Cart</button>
+            <button class="view-more-btn">View More</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="t">Wireless Headphones</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="images/headphone1.jpeg" alt="Headphones 1" width="200">
+          <h3>Noise Canceller</h3>
+          <p>₹2999</p>
+          <div class="card-buttons">
+            <button onclick="addToCart(this, 'Noise Canceller', 2999)">Add to Cart</button>
+            <button class="view-more-btn">View More</button>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="images/headphone2.jpeg" alt="Headphones 2" width="200">
+          <h3>Bluetooth Beats 1</h3>
+          <p>₹3499</p>
+          <div class="card-buttons">
+            <button onclick="addToCart(this, 'Bluetooth Beats 1', 3499)">Add to Cart</button>
+            <button class="view-more-btn">View More</button>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="images/headphone3.jpeg" alt="Headphones 3" width="200">
+          <h3>Bluetooth Beats 2</h3>
+          <p>₹3499</p>
+          <div class="card-buttons">
+            <button onclick="addToCart(this, 'Bluetooth Beats 2', 3499)">Add to Cart</button>
+            <button class="view-more-btn">View More</button>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="images/headphone4.jpeg" alt="Headphones 4" width="200">
+          <h3>Bluetooth Beats 3</h3>
+          <p>₹3499</p>
+          <div class="card-buttons">
+            <button onclick="addToCart(this, 'Bluetooth Beats 3', 3499)">Add to Cart</button>
+            <button class="view-more-btn">View More</button>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="images/headphone5.jpeg" alt="Headphones 5" width="200">
+          <h3>Bluetooth Beats 4</h3>
+          <p>₹3499</p>
+          <div class="card-buttons">
+            <button onclick="addToCart(this, 'Bluetooth Beats 4', 3499)">Add to Cart</button>
+            <button class="view-more-btn">View More</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="t">Smart TVs</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="images/TV1.jpeg" alt="TV 1" width="250">
+          <h3>LED 4K Ultra HD 1</h3>
+          <p>₹19999</p>
+          <div class="card-buttons">
+            <button onclick="addToCart(this, 'LED 4K Ultra HD 1', 19999)">Add to Cart</button>
+            <button class="view-more-btn">View More</button>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="images/TV2.jpeg" alt="TV 2" width="250">
+          <h3>Smart Android TV</h3>
+          <p>₹21499</p>
+          <div class="card-buttons">
+            <button onclick="addToCart(this, 'Smart Android TV', 21499)">Add to Cart</button>
+            <button class="view-more-btn">View More</button>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="images/TV3.jpeg" alt="TV 3" width="250">
+          <h3>LED 4K Ultra HD 2</h3>
+          <p>₹19999</p>
+          <div class="card-buttons">
+            <button onclick="addToCart(this, 'LED 4K Ultra HD 2', 19999)">Add to Cart</button>
+            <button class="view-more-btn">View More</button>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="images/TV4.jpeg" alt="TV 4" width="250">
+          <h3>LED 4K Ultra HD 3</h3>
+          <p>₹19999</p>
+          <div class="card-buttons">
+            <button onclick="addToCart(this, 'LED 4K Ultra HD 3', 19999)">Add to Cart</button>
+            <button class="view-more-btn">View More</button>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="images/TV5.jpeg" alt="TV 5" width="250">
+          <h3>LED 4K Ultra HD 4</h3>
+          <p>₹19999</p>
+          <div class="card-buttons">
+            <button onclick="addToCart(this, 'LED 4K Ultra HD 4', 19999)">Add to Cart</button>
+            <button class="view-more-btn">View More</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="t">Laptops</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="images/laptop3.jpeg" alt="Laptop 1" width="250">
+          <h3>UltraBook X</h3>
+          <p>₹49999</p>
+          <div class="card-buttons">
+            <button onclick="addToCart(this, 'UltraBook X', 49999)">Add to Cart</button>
+            <button class="view-more-btn">View More</button>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="images/laptop 2.jpeg" alt="Laptop 2" width="250">
+          <h3>Gaming Beast 1</h3>
+          <p>₹69999</p>
+          <div class="card-buttons">
+            <button onclick="addToCart(this, 'Gaming Beast 1', 69999)">Add to Cart</button>
+            <button class="view-more-btn">View More</button>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="images/laptop4.jpeg" alt="Laptop 3" width="250">
+          <h3>Gaming Beast 2</h3>
+          <p>₹69999</p>
+          <div class="card-buttons">
+            <button onclick="addToCart(this, 'Gaming Beast 2', 69999)">Add to Cart</button>
+            <button class="view-more-btn">View More</button>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="images/laptop5.jpeg" alt="Laptop 4" width="250">
+          <h3>Gaming Beast 3</h3>
+          <p>₹69999</p>
+          <div class="card-buttons">
+            <button onclick="addToCart(this, 'Gaming Beast 3', 69999)">Add to Cart</button>
+            <button class="view-more-btn">View More</button>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="images/laptop6.jpeg" alt="Laptop 5" width="250">
+          <h3>Gaming Beast 4</h3>
+          <p>₹69999</p>
+          <div class="card-buttons">
+            <button onclick="addToCart(this, 'Gaming Beast 4', 69999)">Add to Cart</button>
+            <button class="view-more-btn">View More</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    function addToCart(button, productName, productPrice) {
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      let existing = cart.find(item => item.name === productName);
+      if (existing) {
+        existing.quantity += 1;
+      } else {
+        cart.push({ name: productName, price: productPrice, quantity: 1 });
+      }
+      localStorage.setItem('cart', JSON.stringify(cart));
+
+      button.classList.add("added-success", "tick");
+      button.disabled = true;
+      button.textContent = "Added";
+
+      setTimeout(() => {
+        button.classList.remove("added-success", "tick");
+        button.disabled = false;
+        button.textContent = "Add to Cart";
+      }, 1500);
+    }
+  </script>
+
+  <script>
+  document.getElementById('searchInput').addEventListener('input', function () {
+    const query = this.value.toLowerCase();
+    const cards = document.querySelectorAll('.product-card');
+
+    cards.forEach(card => {
+      const title = card.querySelector('h3').textContent.toLowerCase();
+      if (title.includes(query)) {
+        card.style.display = "block";
+      } else {
+        card.style.display = "none";
+      }
+    });
+  });
+  </script>
+
+  <script>
+  document.querySelectorAll('.view-more-btn').forEach((btn) => {
+    btn.addEventListener('click', function () {
+      const card = this.closest('.product-card');
+      const name = card.querySelector('h3').innerText;
+      const priceText = card.querySelector('p').innerText.replace(/[₹,]/g, '');
+      const price = parseInt(priceText);
+      const image = card.querySelector('img').getAttribute('src');
+
+      const product = { name, price, image };
+      localStorage.setItem('selectedProduct', JSON.stringify(product));
+
+      window.location.href = 'product-detail.html';
+    });
+  });
+  </script>
+
+  <footer class="footer">
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>About E-Shop</h3>
+            <p>Your trusted online store for the latest tech and lifestyle products. We offer quality products with fast delivery and secure transactions.</p>
+        </div>
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="product.html">Products</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Account</h3>
+            <ul>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="login.html">Register</a></li>
+                <li><a href="checkout.html">Checkout</a></li>
+                <li><a href="cart.html">My Cart</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Contact Info</h3>
+            <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+            <p><i class="fas fa-envelope"></i> info@eshop.com</p>
+            <p><i class="fas fa-map-marker-alt"></i> 123 Shopping St, City, State 12345</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 E-Shop. All rights reserved. | Privacy Policy | Terms of Service</p>
+    </div>
+</footer>
+
+</body>
+
+</html>
