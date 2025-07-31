@@ -1,4 +1,4 @@
-Here's a well-formatted `README.md` file tailored for your **E-commerce Frontend Website** project. You can copy and paste this into your GitHub repo as `README.md`.
+
 
 ---
 
