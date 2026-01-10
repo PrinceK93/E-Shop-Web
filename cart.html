@@ -59,7 +59,7 @@
     window.onload = function () {
       const cart = JSON.parse(localStorage.getItem('cart')) || [];
       const cartItemsContainer = document.querySelector('.cart-items');
-      const cartTotalContainer = document.querySelector('.cart-total strong');
+      const cartTotalContainer =  document.querySelector('.cart-total strong');
       let total = 0;
 
       cartItemsContainer.innerHTML = '';
